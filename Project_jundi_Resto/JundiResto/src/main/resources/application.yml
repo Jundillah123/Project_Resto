@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres?user=postgres.wzemcwkyqtkboesvpedq&password=R0zrmvYaMeUNOIgf
+    username: wzemcwkyqtkboesvpedq
+    password: R0zrmvYaMeUNOIgf
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update  # Gunakan 'update' untuk pengembangan, 'none' untuk produksi
+  hikari:
+    pool-name: HikariCP
+    maximum-pool-size: 10
+    minimum-idle: 5
+    idle-timeout: 30000
+    max-lifetime: 60000
+    connection-timeout: 30000
+    validation-timeout: 5000
+
+  main:
+    allow-bean-definition-overriding: true
+
+# Menambahkan port untuk aplikasi
+server:
+  port: 2525  # Gantilah dengan port yang Anda inginkan, misalnya 8081
